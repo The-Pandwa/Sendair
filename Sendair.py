@@ -11,13 +11,15 @@ import seaborn as sns
 import plotly.express as px
 import matplotlib.pyplot as plt
 
-modelNLP = joblib.load(r'C:\Users\jerem\Documents\Wild Code School\Projet 3\modele_NLP.pkl')
-vectorizer = joblib.load(r'C:\Users\jerem\Documents\Wild Code School\Projet 3\vectorizer.pkl')
-scaler = joblib.load(r'C:\Users\jerem\Documents\Wild Code School\Projet 3\scaler_F.pkl')
-modelLR = joblib.load(r'C:\Users\jerem\Documents\Wild Code School\Projet 3\modelLR_F.pkl')
-df_distance = pd.read_csv(r'C:\Users\jerem\Documents\Wild Code School\Projet 3\distance_airports.csv')
-airports = pd.read_csv(r'C:\Users\jerem\Documents\Wild Code School\Projet 3\airports.csv')
-reviews = pd.read_csv(r"C:\Users\jerem\Documents\Wild Code School\Projet 3\Airline_review_transformed.csv")
+modelNLP = joblib.load('modele_NLP.pkl')
+vectorizer = joblib.load('vectorizer.pkl')
+scaler = joblib.load('scaler_F.pkl')
+modelLR = joblib.load('modelLR_F.pkl')
+df_distance = pd.read_csv('distance_airports.csv')
+airports = pd.read_csv('airports.csv')
+review_1 = pd.read_csv("Airline_review_transformed_1.csv")
+review_2 = pd.read_csv("Airline_review_transformed_2.csv")
+reviews = pd.concat([review_1, review_2])
 
 st.set_page_config(page_title="SENDAIR", page_icon=":airplane:", layout="wide")
 
