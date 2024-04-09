@@ -151,9 +151,9 @@ def page_1():
         if hour == None :
             hour = 12
 
-        if dep_delay == 'Long delay (> 15 min)' :
+        if dep_delay == 'Long delay (> 20 min)' :
             dep_delay = 3
-        elif dep_delay == 'Slight delay (< 15 min)' :
+        elif dep_delay == 'Slight delay (5 to 20 min)' :
             dep_delay = 2
         elif dep_delay == 'No delay' :
             dep_delay = 1
