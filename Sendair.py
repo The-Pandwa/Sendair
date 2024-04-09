@@ -488,23 +488,13 @@ def page_2():
     st.write('')
     
     st.markdown("<h2 style='text-align: center;'>Analyses complémentaires</h2>", unsafe_allow_html=True) 
-    with st.container(border = True):
-        col1, col2 = st.columns(2)
-        with col1 :
-        # Créer la figure et les axes avec Matplotlib
-            fig, ax = plt.subplots(figsize = (20,8), facecolor='none')
-            sns.histplot(data=reviews, x='len_review', alpha=1)
-            plt.title('Histogramme de la longueur des critiques')
-            ax.set_ylabel("Nombre d'avis")
-            ax.set_xlabel("Nombre de caractères")
-            st.pyplot(fig)
-        with col2 :
-            fig2, ax = plt.subplots(figsize = (20,8), facecolor='none')
-            sns.histplot(data = reviews, x = 'Note_weighting', alpha=1)
-            plt.title('Histogramme de la répartition des notes')
-            ax.set_ylabel("Nombre de note")
-            ax.set_xlabel("Valeur de la note")
-            st.pyplot(fig2)
+    # Créer la figure et les axes avec Matplotlib
+    fig, ax = plt.subplots(figsize = (20,8), facecolor='none')
+    sns.histplot(data=reviews, x='len_review', alpha=1)
+    plt.title('Histogramme de la longueur des critiques')
+    ax.set_ylabel("Nombre d'avis")
+    ax.set_xlabel("Nombre de caractères")
+    st.pyplot(fig)
 
     
     st.write('')
