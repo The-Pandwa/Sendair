@@ -337,8 +337,8 @@ def page_1():
                     m = folium.Map(location=[center_lat, center_long],zoom_start=5)
                 else :
                     m = folium.Map(location=[center_lat, center_long],zoom_start=4)
-                folium.Marker(location=point_origin,popup=origin_airport).add_to(m)
-                folium.Marker(location=point_destination,popup=destination_airport).add_to(m)
+                folium.Marker(location=point_origin,popup=origin_airport,icon=folium.Icon(icon='plane')).add_to(m)
+                folium.Marker(location=point_destination,popup=destination_airport,icon=folium.Icon(icon='flag')).add_to(m)
                 if resultat <= 1 :
                     folium.PolyLine(locations=[point_origin, point_destination], color='green').add_to(m)
                 elif resultat <= 5 :
