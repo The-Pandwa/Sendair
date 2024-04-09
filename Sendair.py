@@ -499,8 +499,14 @@ def page_2():
             ax.set_xlabel("Nombre de caractères")
             st.pyplot(fig)
         with col2 :
-            sns.histplot(data = df_review_rating, x = 'Note_weighting')
+            fig, ax = plt.subplots(figsize = (20,8), facecolor='none')
+            sns.histplot(data = reviews, x = 'Note_weighting', alpha=1)
+            plt.title('Histogramme de la répartition des notes')
+            ax.set_ylabel("Nombre de note")
+            ax.set_xlabel("Valeur de la note")
+            st.pyplot(fig)
 
+    
     st.write('')
     st.write('')
     st.write('')
