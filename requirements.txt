@@ -10,3 +10,4 @@ fuzzywuzzy
 nltk
 joblib
 folium
+streamlit-folium
